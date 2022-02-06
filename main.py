@@ -4,7 +4,6 @@ print("Welcome to Fiber Internet Support. ")
 name = input("Could I have your name please? ")
 print("Hello " + name + ", thank you for contacting Fiber Internet Support.")
 issue = input("How may I assist you? ")
-# if statement for no internet
 print("Okay!" + "Let's start with a few troubleshooting steps.\n ")
 
 bill = input("Have you payed the internet bill?\n" + "NOTE: Please reply with a CAPITOL Y or N: ")

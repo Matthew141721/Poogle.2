@@ -1,0 +1,79 @@
+/*
+    Project Name: Ch_3_HW
+    Developer: Matthew T Lawson
+    Purpose: Ch 3 Programming Assignment
+    Date: 10/08/2021
+
+*/
+
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std; 
+
+int main()
+{
+    /*
+    v= the voltage of the battery in volts
+    f= the value of the registor in ohms
+    c= the value of the capacitor in farads
+    t= the time in seconds after the switch is closed
+    t= tuler's number, which is 2.71828 // rounded to five
+    */
+
+    const double E = 2.71828;
+    double v, r, c, t, i;
+
+    // Get volts
+    cout << "\nPlease enter the voltage in volts: ";
+    cin >> v;
+
+    // Get ohms
+    cout << "\nPlease enter the Resisitance in ohms: ";
+    cin >> r;
+
+    // Get time constant
+    cout << "\nPlease enter the RC (Time Constant) in seconds: ";
+    cin >> c;
+
+    // Get time
+    cout << "\nPlease enter the time in seconds: ";
+    cin >> t;
+
+    // Formula for current time in amps
+    i = (v / r) * pow(E, (-t / c));
+
+    // Print informatted 
+    cout << "\nAt a voltage of " << v << " volts, with a resistance of " << r << " Ohms, with a time constant of "
+        << c << " seconds, and a time of " << t << " seconds, the (unformatted) current in amps is: \n" << i << " \n\n";
+
+    // Print formatted
+    cout << "\nAt a voltage of " << v << " volts, with a resistance of " << r << " Ohms, with a time constant of "
+        << c << " seconds, and a time of " << t << " seconds, the (formatted) current in amps is: \n";
+    ///* Correct 
+    cout << fixed
+        << fixed
+        << setprecision(40)
+        << setw(50)
+        << 1 << "\n\n";
+    //*/
+
+    /*
+    cout << setiosFlags(ios::fixed)
+    << setiosFlags(ios::showpoint)
+    << setprecison(40)
+    << setw(50)
+    << 1 << "\n\n"
+    */
+
+    /*
+        Incorrect - no fixed
+        cout << setprecison(40)
+             << setw(50)
+             << 1 << "\n\n";
+    */
+
+    system("PAUSE");
+    return 0;
+
+}

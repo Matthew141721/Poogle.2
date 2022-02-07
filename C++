@@ -1,0 +1,62 @@
+# This was one of the C++ assignments at my college
+
+/*
+    Program name: Ch_2_HW
+    Developer: Matthew Lawson
+    Date: 9/30/2021
+    Purpose: Ch 2 Programming Assignment 
+*/
+
+#include <iostream>
+
+using namespace std;
+int main()
+
+{
+    double I; // Increase in length of slab
+    double F; // Force applied to slab
+    double k = 1000; // Conversion of F to mm's
+    double l; // Length
+    double w; // Width
+    double d; // Depth
+    double e; // Modulus of elasticity 
+    double cm2mm = 10; // conversion for cm to mm 
+
+    l = 3; // length in meters
+    l = l * k;  // convert from m to mm 1 m = 10000 mm
+    w = 4; // width in cm
+    w = w * cm2mm; // convert from cm to mm 1 cm = 10 mm
+    d = 2; // depth in mm
+    F = 4; // applied force (N = kg-m/(s*s))
+    e = 68950; // modulus of elasticity of aluminum
+
+    // Formula to determine increase in length of a slab of metal pulled from one end
+    I = F * k * l / (w * d * e);
+
+    cout << "\nThe increase in length of a slab of aluminum that is: \n"
+        << l << " millimeter long, \n"
+        << w << " millimeters wide, \n"
+        << d << " millimeters deep, \n"
+        << "Which has been subjected to a force of " << F << " Newtons is: \n"
+        << I << " millimeters\n\n";
+
+    system("PAUSE");
+
+
+    e = 110000; // modulus of elasticity of copper
+
+    // Must calculate I again if one of the variables changed
+    I = F * k * l / (w * d * e);
+
+    cout << "\nThe increase in length of a slab of copper that is: \n"
+        << l << " millimeter long, \n"
+        << w << " millimeters wide, \n"
+        << d << " millimeters deep, \n"
+        << "Which has been subjected to a force of " << F << " Newtons is: \n"
+        << I << " millimeters\n\n";
+
+
+    system("PAUSE");
+    return 0;
+      
+}
